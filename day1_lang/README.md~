@@ -1,0 +1,21 @@
+## echo
+
+This is a useful command that parrots what you type back to the screen
+```shell
+$ echo Hello World
+Hello World
+```
+
+
+## Taking notes / comments in bash
+
+To add a note while on the command line, preface your note with the
+`#` character.  You can do this on the whole line, or after a command
+before hitting return.
+
+```shell
+$ #This is a commment, whole line is ignored
+$ echo Hello #Everything from here on is ignored
+Hello
+$ # Output remained
+```

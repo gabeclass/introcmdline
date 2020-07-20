@@ -1,0 +1,32 @@
+# Navigating the filesystem
+
+## Some commands
+
+```
+whoami                         # who you are
+pwd                            # print working directory
+cd                             # used to change directory
+```
+
+## Absolute and relative pathnames
+
+* Every folder on the system has an absolute "address" called its
+  *absolute pathname*, beginning with the root directory `/` and
+  descending through the file tree.  So, for instance, my home
+  directory on Adroit has absolute pathname `/home/perezgiz`.
+
+* If you enter a folder name that *does not* begin with `/`, the shell
+  interprets that as a *relative pathname* (relative to where you are
+  right now). In other words, the shell *prepends* the result of `$
+  pwd` to what you've typed.
+
+* The above also applies to *filenames*, not just to folder names.
+
+* Shortcuts to refer to certain folders:
+  ```
+  .                              # where you are right now
+  ..                             # the folder one level above you
+  ~                              # *your* home folder (/home/<youruserID>)
+  ~<user>                        # home folder of <user>
+  ```
+

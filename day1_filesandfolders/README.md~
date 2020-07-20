@@ -1,0 +1,9 @@
+# Navigating files and folders
+
+```
+mkdir <path/name>              # make directory
+rmdir <path/name>              # remove directory (if empty)
+
+```
+
+

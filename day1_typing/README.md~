@@ -1,0 +1,41 @@
+
+
+## Helpful hints
+
+* Up/down arrow let you navigate through your recent command history
+  quickly.
+  
+* The `TAB` key can provide helpful autocompletion
+
+* Other key-navigation shortcuts that we can't focus on today but
+  which help actualize your will on the command line with less
+  latency.  Some examples (`M` denotes "meta" or "Alt" key -- Mac
+  users need to enable "option as meta" in Terminal --> Preferences
+  --> Keyboard (I think?)
+  
+  ```
+  C-a                            # Move cursor to start of line
+  C-e                            # Move cursor to end of line
+  C-d                            # Delete forward one character
+  M-d                            # Delete forward one "word"
+  M-backspace                    # Delete backward one "word"
+  M-f                            # Move cursor forward one "word"
+  M-b                            # Move cursor backward one "word"
+  
+  C-u                            # Delete from cursor to start of line
+  C-k                            # Delete from cursor to end of line
+  C-y                            # "Yank" (pasted) last thing deleted
+  ```
+
+
+## The importance of practice... and of playing "golf"
+
+The only way to get better at the command line (or any skill) is to
+use it *regularly*.  Challenge yourself to do more mouse-free.
+
+### **ABG!**  (**A**lways **B**e **G**olfing!)
+
+Also challenge yourself to do things in as few key-presses as possible
+(like fewer strokes in golf). The command line can become quite
+onerous if you have to type too much.  Train your fingers to make the
+computer type as much as possible for you.
