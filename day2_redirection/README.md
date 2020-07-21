@@ -40,6 +40,9 @@ $ cat file1 file2 | head | tail
 
 ```
 cat
+tac
+head
+tail
 tr
 wc
 uniq
@@ -48,13 +51,11 @@ comm
 cut
 ```
 
-## `wget` can send output to `stdout`
-
-```shell
-$ man wget
-```
 
 ## Declaration of Independence pipeline exercise
 
-
+Produce a histogram of the top 10 unique words in the US Declaration
+of Independence, using the file `usdec.txt` you now have locally
+stored, but **doing it all in a single pipeline!** This will take some
+thought and some time.
 
