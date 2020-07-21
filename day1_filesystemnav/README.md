@@ -7,6 +7,7 @@ whoami                         # who you are
 pwd                            # print working directory
 cd                             # used to change directory
 ls                             # list directory contents (plus other uses)
+du                             # show disk usage
 ```
 
 ## Absolute and relative pathnames
