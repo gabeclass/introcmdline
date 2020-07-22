@@ -67,9 +67,35 @@ $ <cmd1> | tee file1.txt
 # Sends contents of cmd1's stdout *both* to screen *and* to file1.txt
 ```
 
+## Making the output of Command 1 the *arguments* of Command 2
+
+Some commands do not accept input from `stdin`.  For instance, `echo`
+does not (at least not by default):
+```shell
+$ echo Hello | echo
+# Nothing comes out
+```
+
+To get the 2nd `echo` to say "hello", we need the output of the 1st
+`echo` to become the *argument* of the 2nd `echo`.  The utility that
+accomplishes this is `xargs` :
+```shell
+$ echo Hello | xargs echo
+# What happens?
+```
+
+
 ![Visualizing tee](../images/Tee_ccbysa4.0_usersven.svg)
 
-## Declaration of Independence pipeline exercise
+## Exercise: Word-frequency in US Declaration of Independence
 
+Using only the utilities we've seen so far, write a *single pipeline*
+that will ultimately output (both to `stdout` *and* to a file called
+`usdechistogram.txt`) the top 10 words, by frequency (and ignoring
+case) in the US Declaration of Independence, along with the number of
+times each occurs.
 
+This group exercise will require a lot of reading of `man` pages and
+iterative trial and error, and it brings together most (or all) of the
+skills we've learned so far.  Go for it!
 
