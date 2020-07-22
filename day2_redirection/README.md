@@ -5,6 +5,8 @@ Linux has 3 core *file streams*:
 * `stdout` --> defaults to screen (abbrev 1)
 * `stderr` --> defaults to screen (abbrev 2)
 
+![Standard file streams](../images/Stdstreams_pubdomain.svg)
+
 But any of these "hoses" can be redirected to point to a file (this is
 possible because, under the hood, Linux represents *everything* to the
 user -- even hardware like the monitor or keyboard -- as if it were a
@@ -36,13 +38,13 @@ For example:
 $ cat file1 file2 | head | tail
 ```
 
+![Pipeline](../images/Pipeline_pubdomain.svg)
+
+
 ## Some useful text filtering utilities that work this way
 
 ```
 cat
-tac
-head
-tail
 tr
 wc
 uniq
@@ -51,11 +53,23 @@ comm
 cut
 ```
 
+## `wget` can send output to `stdout`
+
+```shell
+$ man wget
+```
+
+## Redirecting both to a stream *and* a file?
+
+Use the `tee` command:
+```
+$ <cmd1> | tee file1.txt
+# Sends contents of cmd1's stdout *both* to screen *and* to file1.txt
+```
+
+![Visualizing tee](../images/Tee_ccbysa4.0_usersven.svg)
 
 ## Declaration of Independence pipeline exercise
 
-Produce a histogram of the top 10 unique words in the US Declaration
-of Independence, using the file `usdec.txt` you now have locally
-stored, but **doing it all in a single pipeline!** This will take some
-thought and some time.
+
 
