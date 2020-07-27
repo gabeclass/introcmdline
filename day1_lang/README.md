@@ -22,7 +22,9 @@ Now try this one:
 $ echo PATH
 $ echo $PATH
 ```
-The variable `PATH` contains a colon-delimited list of folders (i.e. directories) found on the system.  We'll see later why this list is here and how it is used.
+The variable `PATH` contains a colon-delimited list of folders
+(i.e. directories) found on the system.  We'll see later why this list
+is here and how it is used.
 
 How do you define your own variables?
 ```shell
@@ -32,7 +34,6 @@ $ x=something
 $ echo $x
 ```
 
-
 What if you had typed:
 ```shell
 $ echo $y
@@ -40,11 +41,23 @@ $ y=something else
 # What happens?  Why?
 ```
 
-Variable assignment can preface a command.  For instance:
+Multiple commands can be issued on one line, separated by a `;`, like this:
 ```shell
 $ echo $y
-$ y=something echo $y
+$ y=something; echo $y
 # What happens?  Why?
+```
+
+
+Variable assignment can preface a command.  For instance:
+```shell
+$ echo $z
+$ z=something echo $z
+# What happens?  Why?
+# Was z actually defined?  Let's see...
+$ echo $z
+# What if I instead type...
+$ z=something echo $y
 ```
 
 You can clear out variable values with the `unset` command:
@@ -97,7 +110,7 @@ not treated literally.  For instance, the `$` seems to mean "treat the
 following string as the name of a variable and replace the whole
 expression with the value of the variable".
 
-### Escaping
+### Escaping \& Quoting
 
 But what if you wanted to type a literal dollar sign? This works:
 ```shell
@@ -109,7 +122,9 @@ But this won't:
 $ echo $HOME
 
 ```
-In the latter case, we need to "turn off" the special meaning of the `$`.  Doing that is called **escaping** a character.  There are a few ways to do that in bash.   Here are a couple:
+In the latter case, we need to "turn off" the special meaning of the
+`$`.  Doing that is called **escaping** a character.  There are a few
+ways to do that in bash.  Here are a couple:
 
 * Preface the special character with a backslash
 ```shell
@@ -130,3 +145,30 @@ $ echo "$"HOME
 # What happens?
 ```
 
+#### EXERCISE
+
+How can you get a single backlash `\` with the shortest possible
+command?  In how few characters do you think you can do it?
+
+**CAVEAT** If some of you try something that causes the prompt to
+change to a `>` character, then you uncovered something we'll deal
+with in a minute.  If that happens, type `Ctrl-c` and you'll get back
+to your regular prompt.
+
+
+About that caveat... When you type the following lines, very different
+things happen.  Let's understand why..
+```shell
+$ echo '\'
+# What happens?
+$ echo "\"
+# What happens this time?
+```
+
+### The "secondary" bash prompt
+
+Some bash commands can span several lines.  Whenever you're moved to a
+second (or higher) line within a *single* command, bash will indicate
+this by changing the prompt to a different character (the default for
+this character is `>`, but as we'll see later in the workshop, this
+can be customized).
