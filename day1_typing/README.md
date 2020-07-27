@@ -5,7 +5,10 @@
 * Up/down arrow let you navigate through your recent command history
   quickly.
   
-* The `TAB` key can provide helpful autocompletion
+* The `TAB` key can provide helpful autocompletion -- it matches *file
+  and folder names* incrementally (one TAB will autocomplete if unique
+  and pause if not unique; a 2nd TAB will show all possible
+  completions to that point)
 
 * Other key-navigation shortcuts that we can't focus on today but
   which help actualize your will on the command line with less
@@ -27,6 +30,9 @@
   C-y                            # "Yank" (pasted) last thing deleted
   
   C-_                            # Undo your last editing command
+  
+  !!_                            # Last command in your history
+  !$_                            # Last *argument* of last command
   ```
 
 
