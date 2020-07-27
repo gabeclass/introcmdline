@@ -8,6 +8,7 @@ pwd                            # print working directory
 cd                             # used to change directory
 ls                             # list directory contents (plus other uses)
 du                             # show disk usage
+tree                           # You'll see.... (don't type this yet!)
 ```
 
 ## Absolute and relative pathnames
