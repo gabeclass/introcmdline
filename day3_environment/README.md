@@ -31,16 +31,45 @@ $ export <var>=<value>
 * EDITOR -- some programs, like git, use this to figure out your
   preferred default editor
 
-# Startup file (.bashrc)
+# Startup files (.bash_profile and .bashrc)
 
-All of these can be customized and set when your shell begins by
-placing the `export` commands in a file called `.bashrc` in your home
-folder.
+## .bash_profile
 
-Other useful customizations can go in this file.  Like aliases (or, if
-you choose to do a deeper dive, `bash` functions). For instance,
-here's a useful alias to just show you the folders inside your working
-directory:
+Whenever you *log into* a system, a file (that must live in your home
+folder) called `.bash_profile` gets run, assuming that file exists
+(this file can contain legal lines of bash -- it's essentially a
+script).  You could put lines in here that, for instance, customize
+the value of your `PS1` and `PS2` variables to make them to your
+liking (via export commands).
+
+You could also define functions in here, customize other environment
+variables like `PATH` and `EDITOR`, and set up aliases.  But it's more
+common to put *those* customizations in a second file called
+`.bashrc`, as explained below.
+
+## .bashrc
+
+`.bashrc` (which must also live in your home folder) gets run not when
+you log in but whenever any *subshell* is spawned (e.g. when a script
+is run, or when you run a command inside `( )`, or if you just
+manually spawn a subshell by running `bash` on the command line.  Why?
+Because you might want your functions and aliases and your
+personalized `PATH` variable value to be available not just at the
+main login shell but also to other programs or scripts you run that
+get thrust into subshells.
+
+So things like certain `export` commands and aliases commonly go into
+`.bashrc`, and then to make those customizations also available in
+your login shell, you have the final line of `.bash_profile` as
+
+``` shell
+source ~/.bashrc
+```
+so that `.bash_profile`'s last act is to run `.bashrc` "manually".
+
+As an example, here's a useful alias you might want to add to
+`.bashrc` (this shows you just the folders inside your working
+directory):
 ```shell
 alias lsd='ls -d */'
 ```
@@ -48,7 +77,7 @@ Can you read the `man` page for `ls` to understand why this works?
 
 ## Reloading your .bashrc
 
-If you edit your `.bashrc`, it won't take effect in the current shell
+**NOTE:** If you edit your `.bash_profile` or `.bashrc`, the changes won't take effect in the current shell
 session unless you rerun it, using the command `source`:
 ```shell
 $ source ~/.bashrc
