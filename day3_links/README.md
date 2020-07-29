@@ -33,7 +33,7 @@ links, e.g. `cd`ing, `cat`ing, `ls`ing, etc.
 
 ## Hard links
 
-As we saw yesterday, files and folders are an illusion to make the
+As we have already seen, files and folders are an illusion to make the
 data on physical media like hard drives accessible to us in the
 human-friendly file-cabinet motif.
 
