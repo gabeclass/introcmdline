@@ -80,10 +80,20 @@ to make that happen.
 
 `chmod g+w test.text` will make it readable by its assigned group.
 
+`chmod g=rw test.text` would do the same thing, by stating what you
+want the final permissions to be (read permission, which the group
+already has, and also write permission).
+
 `chmod g-w test.text` would take that away.
 
-The syntax is roughly: `chmod <ugo><+-><rwx> path/to/file.txt`
-`u` is user, `g` is group, `o`is other. `+` or `-` add/remove permissions and `r` is read, `w` is write, and `x` is write.
+
+The syntax is roughly: `chmod <ugo><+-=><rwx> path/to/file.txt` `u` is
+user, `g` is group, `o`is other. `+` or `-` add/remove permissions and
+`r` is read, `w` is write, and `x` is write.
+
+To specify permissions for, say, the user *and* the group, you
+comma-separate the assignments: `chmod g=rw,o=r test.text # The u,g,o
+permissions can be given in any order`
 
 You can also specify the permissions using 'octal' permissions like
 `chmod 777` which are shorthand ways to specify the final permission
