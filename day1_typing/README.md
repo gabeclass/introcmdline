@@ -17,22 +17,26 @@
   --> Keyboard (I think?)
   
   ```
-  C-a                            # Move cursor to start of line
-  C-e                            # Move cursor to end of line
-  C-d                            # Delete forward one character
-  M-d                            # Delete forward one "word"
-  M-backspace                    # Delete backward one "word"
-  M-f                            # Move cursor forward one "word"
-  M-b                            # Move cursor backward one "word"
+  C-a                     # Move cursor to start of line
+  C-e                     # Move cursor to end of line
+  C-d                     # Delete forward one character
+  M-d                     # Delete forward one "word"
+  M-backspace             # Delete backward one "word"
+  M-f                     # Move cursor forward one "word"
+  M-b                     # Move cursor backward one "word"
+
+  C-t                     # Transpose char at cursor & previous one
+  M-t                     # Transpose word at cursor & previous one
+
+  C-u                     # Delete from cursor to start of line
+  C-k                     # Delete from cursor to end of line
+  C-y                     # "Yank" (pasted) last thing deleted
   
-  C-u                            # Delete from cursor to start of line
-  C-k                            # Delete from cursor to end of line
-  C-y                            # "Yank" (pasted) last thing deleted
+  C-_                     # Undo your last editing command
+  C-/                     # Undo your last editing command
   
-  C-_                            # Undo your last editing command
-  
-  !!_                            # Last command in your history
-  !$_                            # Last *argument* of last command
+  !!_                     # Last command in your history
+  !$_                     # Last *argument* of last command
   ```
 
 
