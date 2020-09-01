@@ -14,7 +14,7 @@
   which help actualize your will on the command line with less
   latency.  Some examples (`M` denotes "meta" or "Alt" key -- Mac
   users need to enable "option as meta" in Terminal --> Preferences
-  --> Keyboard (I think?)
+  --> Keyboard (I think?) )
   
   ```
   C-a                     # Move cursor to start of line
