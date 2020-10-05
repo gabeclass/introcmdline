@@ -204,6 +204,12 @@ for a newline is `\n`, so we could write:
 $ echo $'My name is...\nMy name is...\nMy name is...\nSlim Shady!'
 ```
 
+Tabs can be inserted as `\t` (try it).
+
+A full list of ANSI-C backslash-escape sequences understood by bash
+can be found
+[here](https://www.gnu.org/software/bash/manual/html_node/ANSI_002dC-Quoting.html).
+
 #### Bash automatically concatenates adjacent strings
 
 So we could also have done this (make sure you understand what's happened):
