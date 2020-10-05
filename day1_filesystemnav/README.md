@@ -36,7 +36,7 @@ tree                           # You'll see.... (don't type this yet!)
 ## EXERCISE: Catalog special characters so far
 
 Break into groups and make a catalog of any characters we've seen so
-far that have special meaning to the bash shell.  Take about 10
+far that have special meaning to the bash shell.  Take about 5
 minutes.
 
 ## An experiment
