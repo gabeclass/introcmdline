@@ -102,8 +102,12 @@ mins) survey. When the time comes, please
 
 ## Resources for further study
 
+* _Ryan's Linux Tutorial_ (a brief but thorough [online
+  tutorial](https://ryanstutorials.net/linuxtutorial/) that reviews
+  many of the same topics covered in this workshop)
+
 * _The Linux Command Line_ (a book by William Shotts -- [free PDF
-online](http://linuxcommand.org/tlcl.php)
+online](http://linuxcommand.org/tlcl.php))
 
 * _Introduction to Linux: A Hands on Guide_ (a book by Machtelt
   Garrels -- free PDFs discoverable online; [full HTML
