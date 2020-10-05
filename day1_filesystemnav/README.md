@@ -84,6 +84,12 @@ less <file>                    # paginate thru file
 
 `man` is really displayed with `less`
 
+## EXERCISE -- Slim Shady on many lines
+
+Take a few minutes to read the man page for `echo` and see if you can
+figure out how to get the Slim Shady text on multiple lines using a
+single `echo` command but without using ANSI-C quoting.
+
 
 ## BONUS -- a taxonomy of commands
 
