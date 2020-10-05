@@ -1,5 +1,7 @@
 # Typing more easily in the shell
 
+## Swap Caps Lock and left Ctrl
+
 ## Helpful hints
 
 * Up/down arrow let you navigate through your recent command history
@@ -28,6 +30,10 @@
   C-t                     # Transpose char at cursor & previous one
   M-t                     # Transpose word at cursor & previous one
 
+  M-u                     # Upper-case from cursor to end of word
+  M-l                     # Lower-case from cursor to end of word
+  M-c                     # Capitalize from cursor to end of word
+
   C-u                     # Delete from cursor to start of line
   C-k                     # Delete from cursor to end of line
   C-y                     # "Yank" (pasted) last thing deleted
@@ -38,6 +44,8 @@
   !!_                     # Last command in your history
   !$_                     # Last *argument* of last command
   ```
+
+* `C-r`: reverse incremental search through history
 
 
 ## The importance of practice... and of playing "golf"
