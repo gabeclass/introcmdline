@@ -172,3 +172,43 @@ second (or higher) line within a *single* command, bash will indicate
 this by changing the prompt to a different character (the default for
 this character is `>`, but as we'll see later in the workshop, this
 can be customized).
+
+
+
+### ANSI C Quoting
+
+For certain characters, it is not obvious how you would type them
+literally.  For instance, a newline -- suppose we wanted to get the
+following output with a single `echo` command?
+
+``` shell
+My name is...
+My name is...
+My name is...
+Slim Shady!
+```
+
+We will revisit this question again later and offer additional
+solutions, but for now, try tools you've seen so far, and you'll see
+that they don't work (at least not without some extra tweaks that
+we'll learn about later).  In particular, see what happens if you
+escape a newline as you type (it doesn't work).
+
+We can achieve this using an additional kind of quoting called "ANSI-C
+Quoting". A `$` before a *single-quoted string* will parrot back the
+string, except that it will replace so-called "backslash escape
+sequences" as special ASCII characters.  The backslash-escape notation
+for a newline is `\n`, so we could write:
+
+``` shell
+$ echo $'My name is...\nMy name is...\nMy name is...\nSlim Shady!'
+```
+
+#### Bash automatically concatenates adjacent strings
+
+So we could also have done this (make sure you understand what's happened):
+
+``` shell
+$ echo My name is...$'\n'My name is...$'\n'My name is...$'\n'Slim Shady!
+```
+
