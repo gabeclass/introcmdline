@@ -39,30 +39,6 @@ Break into groups and make a catalog of any characters we've seen so
 far that have special meaning to the bash shell.  Take about 5
 minutes.
 
-## An experiment
-
-Type:
-```shell
-$ who am i
-```
-Huh. What are the spaces doing?
-
-What about:
-```shell
-$ who registered late
-```
-
-Or:
-```shell
-$ who smells funky
-```
-
-Last one:
-```shell
-$ who knows all this about me
-```
-Ah.  What's really going on?
-
 ## Getting information or help
 
 ```
@@ -123,4 +99,28 @@ The four categories of "verbs" in `bash`:
 4. Files (more precisely, executable files -- how does `bash` know
    where those files live?  Answer:  our old friend `PATH`
 
+
+## Extra-credit manpage exercise (for homework)
+
+Type:
+```shell
+$ who am i
+```
+Huh. What are the spaces doing?
+
+What about:
+```shell
+$ who registered late
+```
+
+Or:
+```shell
+$ who smells funky
+```
+
+Last one:
+```shell
+$ who knows all this about me
+```
+Ah.  What's really going on?
 
