@@ -53,11 +53,18 @@ comm
 cut
 ```
 
-## `wget` can send output to `stdout`
+## `curl` and `wget` can both send output to `stdout`
 
+`curl` does it by default.  To see how to make `wget` do so:
 ```shell
 $ man wget
 ```
+
+## You can pipe into `less`
+
+This is useful for examining the results of a pipeline as you build it
+(just pipe into `less` as you go, examine the output, then remove the
+less and add the next stage of the pipeline).
 
 ## Redirecting both to a stream *and* a file?
 
@@ -66,6 +73,8 @@ Use the `tee` command:
 $ <cmd1> | tee file1.txt
 # Sends contents of cmd1's stdout *both* to screen *and* to file1.txt
 ```
+
+![Visualizing tee](../images/Tee_ccbysa4.0_usersven.svg)
 
 ## Making the output of Command 1 the *arguments* of Command 2
 
@@ -81,11 +90,12 @@ To get the 2nd `echo` to say "hello", we need the output of the 1st
 accomplishes this is `xargs` :
 ```shell
 $ echo Hello | xargs echo
+$ echo Hello | xargs   # also works, b/c `echo` is default cmd for xargs
+$ echo helloworld.jpg | xargs touch
 # What happens?
-```
+``` Really, `xargs` builds new command line(s) based on whatever it
+gets via `stdin`.
 
-
-![Visualizing tee](../images/Tee_ccbysa4.0_usersven.svg)
 
 ## Exercise: Word-frequency in US Declaration of Independence
 
