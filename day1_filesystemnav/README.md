@@ -39,20 +39,6 @@ Break into groups and make a catalog of any characters we've seen so
 far that have special meaning to the bash shell.  Take about 5
 minutes.
 
-## Getting information or help
-
-```
-man <command>                  # displays the manual page for <command>
-
-```
-
-It's important to understand the general *anatomy* of a command. The
-top of a `man` page explains it for any given command.  Which command
-were we typing in the last few examples?  What does it actually do?
-
-```
-who                            # shows users that are logged on
-```
 
 ## Intro to options: examples with the `ls` command
 
@@ -63,26 +49,79 @@ $ ls -l
 $ ls -t
 $ ls -lh # You can combine options
 ```
-Can `ls` take arguments?  If so, how does that work?
 
-## Beyond `man`
-
-What if you can't find a `man` page for something?
+## A taxonomy of "commands"
 
 ```
-apropos <string>         # lists man pages potentially pertinent to <string>
-info <command>           # lists additional information about <command>
+type <command>                 # what kind of 'verb' is <command>
+```
+
+The four categories of "verbs" in `bash`:
+1. Aliases
+2. Shell functions (`bash` is a full-featured programming language,
+   and it allows users to define functions; these are beyond our scope
+   today)
+3. Shell builtins
+4. Files (more precisely, executable files -- how does `bash` know
+   where those files live?  Answer:  our old friend `PATH`
+
+To see which category a command falls into, use `type`:
+
+``` shell
+$ type <command>               # shows type of <command>
+$ type -a <command>            # shows all types when there's more
+                               # than 1 version of <command>
+```
+
+Check the types of each of the following: `echo, pwd, cd, whoami,
+ls`.  Then do it with `-a`.
+
+> **FUN FACT:** You can "escape" an alias with a backslash.  Try:
+> ```shell
+> $ \ls
+> ```
+
+## Getting information or help
+
+Let's look more into `ls`.  Can `ls` take arguments?  If so, how does
+that work?
+
+### `man` (i.e. manual) pages
+```
+man <command>                  # displays the manual page for <command>
 
 ```
-Sometimes, the built-in help is nonexistent or not helpful.  That's when you Google.
+It's important to understand the general *anatomy* of a command. The
+top of a `man` page explains it for any given command.  Which command
+were we typing in the last few examples?  How does it actually work?
 
+Let's look at the `man` page for `ls`...
 
-## `less` -- a pagination program
+### Navigating `man` pages (`less` -- a pagination program)
+`man` pages are really displayed using `less`:
 ```
 less <file>                    # paginate thru file
 ```
 
-`man` is really displayed with `less`
+Typing an `h` while in `less` (or while in a `man` page) brings up a
+list of navigation commands (and other commands). Type `q` to quit the
+`less` help menu (or `q` once out of the help menu to quit `less`
+altogether).
+
+
+### Beyond `man`
+
+What if you can't find a `man` page for something?
+
+```
+help <builtin>           # gives info on bash builtin commands
+apropos <string>         # lists man pages potentially pertinent to <string>
+info <command>           # lists additional information about <command>
+
+```
+Sometimes, the help accessible via the shell is nonexistent or not
+helpful.  That's when you Google.
+
 
 ## EXERCISE -- Slim Shady on many lines
 
@@ -91,28 +130,18 @@ figure out how to get the Slim Shady text on multiple lines using a
 single `echo` command but without using ANSI-C quoting.
 
 
-## BONUS -- a taxonomy of commands
-
-```
-type <command>                 # what kind of 'verb' is <command>
-```
-
-The four categories of "verbs" in `bash`:
-1. Aliases
-2. Shell functions (`bash` is a full-featured programming language;
-   abeyond our scope today)
-3. Shell builtins
-4. Files (more precisely, executable files -- how does `bash` know
-   where those files live?  Answer:  our old friend `PATH`
-
-
 ## Extra-credit manpage exercise (for homework)
+
+```
+who                            # shows users that are logged on
+```
+
 
 Type:
 ```shell
 $ who am i
 ```
-Huh. What are the spaces doing?
+Huh -- not quite the same as the output of `whoami`. What are the spaces doing?
 
 What about:
 ```shell
@@ -128,5 +157,6 @@ Last one:
 ```shell
 $ who knows all this about me
 ```
-Ah.  What's really going on?
+Ah.  What's really going on?  The answer lies within the `man` page
+(but takes some detective work to uncover).
 
