@@ -99,3 +99,20 @@ You can also specify the permissions using 'octal' permissions like
 `chmod 777` which are shorthand ways to specify the final permission
 state directly, rather than the change (treat each letter in a `rwx`
 batch as a bit in a 3-bit number that can run from 0-7).
+
+## Advancec permissions: Access Control Lists (ACLs)
+
+What if you only want certain specific users to be able to access a
+file? Or only users in certain groups (the group permissions you see
+for the file `ls -al` will control access for the "primary" group
+associated with that file at the time of its creation, but you the
+file owner may belong to more than one group and may want some of
+those groups to access a file or folder but not others)?
+
+For these purposes, most Linux filesystems (including the ones on our
+clusters) support an additional finer-grained layer of file/folder
+permissions called Access Control Lists (ACLs).  How they work goes
+beyond the scope of this workshop, but if you'd like to learn more,
+here is [an overview of ACLs from Red
+Hat](https://www.redhat.com/sysadmin/linux-access-control-lists).
+
