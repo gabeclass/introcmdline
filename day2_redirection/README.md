@@ -69,12 +69,21 @@ less and add the next stage of the pipeline).
 ## Redirecting both to a stream *and* a file?
 
 Use the `tee` command:
-```
-$ <cmd1> | tee file1.txt
-# Sends contents of cmd1's stdout *both* to screen *and* to file1.txt
+
+```shell
+$ <cmd1> | tee file1.txt file2.txt ... fileN.txt
+# Sends contents of cmd1's stdout *both* to screen *and* to files file1.txt ... fileN.txt
 ```
 
 ![Visualizing tee](../images/Tee_ccbysa4.0_usersven.svg)
+
+To make `tee` append to rather than clobber (overwrite) the file(s) it
+writes to, use the `-a` option:
+```shell
+$ <cmd1> | tee -a file1.txt
+# Sends contents of cmd1's stdout *both* to screen *and* append output to file1.txt
+```
+
 
 ## Making the output of Command 1 the *arguments* of Command 2
 
