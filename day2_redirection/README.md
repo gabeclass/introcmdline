@@ -93,8 +93,15 @@ $ echo Hello | xargs echo
 $ echo Hello | xargs   # also works, b/c `echo` is default cmd for xargs
 $ echo helloworld.jpg | xargs touch
 # What happens?
-``` Really, `xargs` builds new command line(s) based on whatever it
-gets via `stdin`.
+```
+
+Really, `xargs` builds new command line(s) based on whatever it gets
+via `stdin`.  Let's check out its manpage (and note that, when you
+don't tell `xargs` what command to use, it inserts `echo` as the
+default).
+
+A fuller but brief tutorial on usage of `xargs` can be found
+[here](https://linuxize.com/post/linux-xargs-command/).
 
 
 ## Exercise: Word-frequency in US Declaration of Independence
