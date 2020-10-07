@@ -82,3 +82,17 @@ session unless you rerun it, using the command `source`:
 ```shell
 $ source ~/.bashrc
 ```
+
+An alternate syntax for the `source` command is a single dot:
+```shell
+$ . ~/.bashrc
+```
+Note that this is a different usage of the dot than the one we've
+already seen (as a reference to the current directory).  When a single
+dot is the *first* token on a command line, bash interprets it as a
+shorthand for the
+command `source`.  Everywhere else on the command line, bash leaves
+the dot character untouched so that the command on your command line
+receives it as a literal dot (which is good, b/c as we've seen, there
+is an extra file named literal-dot, i.e. `.`, in every folder which is
+just a hard link to the current folder).
