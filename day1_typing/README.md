@@ -15,8 +15,8 @@ to a (painful) repetitive strain injury that many Linux/UNIX users
 call "[emacs
 pinky](https://www.emacswiki.org/emacs/RepeatedStrainInjury)".
 
-For full desktop keyboards, there are lots of options around
-that can make pressing the left `Ctrl` key often more natural and
+For full desktop keyboards, there are lots of options around that can
+make frequently pressing the left `Ctrl` key more natural and
 ergonomic.  But for laptop keyboards, there are fewer remedies.  The
 most common is to *remap* the `Caps Lock` key to behave like `Ctrl`
 (and then, if you still want access to a `Caps Lock` key, also remap
@@ -32,9 +32,9 @@ working on the command line, which especially for beginners can mean
 the difference between abandoning the exercise and sticking with it &
 growing.
 
-Here are some instructions for how execute this key-swap, depending on
-your operating system.  Many of the links below come from the
-[emacswiki page dedicated to remapping
+Below you will find instructions for how to execute this key-swap,
+depending on your operating system.  Many of the links below come from
+the [emacswiki page dedicated to remapping
 `Ctrl`](https://www.emacswiki.org/emacs/MovingTheCtrlKey), which has
 instructions and screenshots for how to accomplish this in different
 operating systems (including Android, apparently) and in different
